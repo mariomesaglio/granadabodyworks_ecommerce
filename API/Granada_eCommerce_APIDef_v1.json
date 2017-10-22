@@ -1,0 +1,118 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Granada Bodyworks eCommerce",
+    "version": "1",
+    "title": "Granada Bodyworks eCommerce",
+    "termsOfService": "",
+    "contact": {
+      "email": "hola@somosgranada.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host": "www.somosgranada.com",
+  "basePath": "/v1",
+  "tags": [
+    {
+      "name": "products",
+      "description": "Product Information"
+    }
+  ],
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/products": {
+      "post": {
+        "tags": [
+          "products"
+        ],
+        "summary": "Create a new Product.",
+        "description": "",
+        "operationId": "createProduct",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "products"
+        ],
+        "summary": "Modifies an existing Product.",
+        "description": "",
+        "operationId": "updateProduct",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/products/{product_name}": {
+      "get": {
+        "tags": [
+          "products"
+        ],
+        "summary": "Returns the product details.",
+        "description": "",
+        "operationId": "getProduct",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "product_name",
+            "type": "string",
+            "required": true,
+            "description": "Unique product name."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "products"
+        ],
+        "summary": "Drops an Existing Product.",
+        "description": "",
+        "operationId": "deleteProduct",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        }
+      }
+    }
+  }
+}
