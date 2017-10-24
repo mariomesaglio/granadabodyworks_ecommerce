@@ -1,0 +1,45 @@
+{
+  "product_id": "granada_sorbet",
+  "name": "Sorbet",
+  "category": "granada",
+  "subcategory": "efervecentes",
+  "feature": "Ideal para relajarse después de un día agotador",
+  "how_to": "Llenar la bañera con agua cálida. Ingresar a la bañera. Arrojar la Granada al agua y disfrutar de un momento de Relax.",
+  "images": [
+    {
+      "family": "",
+      "type": "",
+      "order": "",
+      "url": ""
+    },
+    {
+      "family": "",
+      "type": "",
+      "order": "",
+      "url": ""
+    }
+  ],
+  "prices": [
+    {
+      "type": "retail",
+      "base_value": "150",
+      "sale_value": "120",
+      "discount_percentage": "20"
+    },
+    {
+      "type": "mayorista",
+      "base_value": "90",
+      "sale_value": "90",
+      "discount_percentage": "0"
+    }
+  ],
+  "on_sale": "t",
+  "fragance_feature": "Una combinación de notas cítricas y frescas pensadas para despertar los sentidos y energizar el cuerpo.",
+  "fragance_components": "pomelo_rosado",
+  "package": {
+    "weight": "300gr",
+    "quantity": 1
+  },
+  "badges": "libre_conservantes, apto_celiaco, apto_veganos",
+  "disclaimer": "Conservar en un lugar fresco y seco. No exponer a la humedad.",
+}

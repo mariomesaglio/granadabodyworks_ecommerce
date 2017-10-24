@@ -107,6 +107,13 @@ paths:
         - application/json
       produces:
         - application/json
+      parameters:
+        - in: body
+          required: true
+          name: "The product description."
+          schema:
+            $ref: "#/definitions/product_submission"
+
       responses:
         '200':
           description: ''
@@ -156,3 +163,61 @@ paths:
       responses:
         '200':
           description: ''
+
+definitions:
+  product_submission:
+    type: object
+    properties:
+      product_id:
+        type: string
+      name:
+        type: string
+      category:
+        type: string
+      subcategory:
+        type: string
+      badges:
+        type: string
+      prices:
+        items:
+          properties:
+            type:
+              type: string
+            base_value:
+              type: string
+            discount_percentage:
+              type: string
+            sale_value:
+              type: string
+          type: object
+        type: array
+      disclaimer:
+        type: string
+      feature:
+        type: string
+      fragance_components:
+        type: string
+      fragance_feature:
+        type: string
+      how_to:
+        type: string
+      images:
+        items:
+          properties:
+            family:
+              type: string
+            order:
+              type: string
+            type:
+              type: string
+            url:
+              type: string
+          type: object
+        type: array
+      package:
+        properties:
+          quantity:
+            type: integer
+          weight:
+            type: string
+        type: object
