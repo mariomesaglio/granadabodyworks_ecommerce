@@ -7,16 +7,16 @@
   "how_to": "Llenar la bañera con agua cálida. Ingresar a la bañera. Arrojar la Granada al agua y disfrutar de un momento de Relax.",
   "images": [
     {
-      "family": "",
-      "type": "",
-      "order": "",
-      "url": ""
+      "family": "familia1",
+      "type": "tipo1",
+      "order": 1,
+      "url": "www.hola.com"
     },
     {
-      "family": "",
-      "type": "",
-      "order": "",
-      "url": ""
+      "family": "familia2",
+      "type": "tipo2",
+      "order": 2,
+      "url": "www.hola.com"
     }
   ],
   "prices": [
@@ -41,5 +41,5 @@
     "quantity": 1
   },
   "badges": "libre_conservantes, apto_celiaco, apto_veganos",
-  "disclaimer": "Conservar en un lugar fresco y seco. No exponer a la humedad.",
+  "disclaimer": "Conservar en un lugar fresco y seco. No exponer a la humedad."
 }

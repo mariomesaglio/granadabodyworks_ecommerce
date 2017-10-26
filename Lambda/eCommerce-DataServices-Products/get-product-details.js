@@ -1,8 +1,7 @@
 console.log('Loading function');
 
-const doc = require('dynamodb-doc');
-
-const dynamo = new doc.DynamoDB();
+var AWS = require('aws-sdk');
+const dynamo = new AWS.DynamoDB.DocumentClient();
 
 exports.handler = (event, context, callback) => {
 
@@ -19,12 +18,12 @@ exports.handler = (event, context, callback) => {
     });
 
     dynamoREQ.TableName = process.env.ProductsTableName;
-    dynamoREQ.FilterExpression = "#product_id = :id";
+    dynamoREQ.KeyConditionExpression = "#product_id = :id"
     dynamoREQ.ExpressionAttributeValues = {":id": event.pathParameters.product_id};
     dynamoREQ.ExpressionAttributeNames = {"#product_id": "product_id"};
 
     console.log(JSON.stringify(dynamoREQ));
 
-    dynamo.scan(dynamoREQ, done);
+    dynamo.query(dynamoREQ, done);
 
 };

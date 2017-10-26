@@ -165,6 +165,43 @@ paths:
           description: ''
 
 definitions:
+  badge_array:
+    items:
+      properties:
+        id:
+          type: string
+        title:
+          type: string
+        image:
+          type: string
+      type: object
+    type: array
+  price_array:
+    items:
+      properties:
+        type:
+          type: string
+        base_value:
+          type: string
+        discount_percentage:
+          type: string
+        sale_value:
+          type: string
+      type: object
+    type: array
+  image_carousel:
+    items:
+      properties:
+        family:
+          type: string
+        order:
+          type: integer
+        type:
+          type: string
+        url:
+          type: string
+      type: object
+    type: array
   product_submission:
     type: object
     properties:
@@ -179,18 +216,7 @@ definitions:
       badges:
         type: string
       prices:
-        items:
-          properties:
-            type:
-              type: string
-            base_value:
-              type: string
-            discount_percentage:
-              type: string
-            sale_value:
-              type: string
-          type: object
-        type: array
+        $ref: "#/definitions/price_array"
       disclaimer:
         type: string
       feature:
@@ -202,18 +228,41 @@ definitions:
       how_to:
         type: string
       images:
-        items:
-          properties:
-            family:
-              type: string
-            order:
-              type: string
-            type:
-              type: string
-            url:
-              type: string
-          type: object
-        type: array
+        $ref: "#/definitions/image_carousel"
+      package:
+        properties:
+          quantity:
+            type: integer
+          weight:
+            type: string
+        type: object
+  product_detail:
+    type: object
+    properties:
+      product_id:
+        type: string
+      name:
+        type: string
+      category:
+        type: string
+      subcategory:
+        type: string
+      badges:
+        $ref: "#/definitions/badge_array"
+      prices:
+        $ref: "#/definitions/price_array"
+      disclaimer:
+        type: string
+      feature:
+        type: string
+      fragance_components:
+        $ref: "#/definitions/badge_array"
+      fragance_feature:
+        type: string
+      how_to:
+        type: string
+      images:
+        $ref: "#/definitions/image_carousel"
       package:
         properties:
           quantity:
